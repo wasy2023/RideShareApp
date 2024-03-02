@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane fx:id="menu" prefHeight="510.0" prefWidth="875.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Button fx:id="ReserveCar" layoutX="670.0" layoutY="112.0" mnemonicParsing="false" onAction="#ReserveCar" text=" Reserve car now" />
+      <MenuBar layoutX="14.0" layoutY="28.0" prefHeight="26.0" prefWidth="321.0">
+        <menus>
+          <Menu mnemonicParsing="false" text="Cars">
+            <items>
+              <MenuItem fx:id="ShowCars" mnemonicParsing="false" onAction="#ShowCars" text="Show all cars" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Reservations">
+            <items>
+              <MenuItem fx:id="CancelReservButton" mnemonicParsing="false" onAction="#CancelReservationSceneSwap" text="Cancel a reservation" />
+                  <MenuItem fx:id="showreservations" mnemonicParsing="false" onAction="#Showusersreservations" text="Show reservations" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Filter cars">
+            <items>
+              <MenuItem fx:id="ByModelButton" mnemonicParsing="false" onAction="#ByModelFunction" text="By model" />
+                  <MenuItem mnemonicParsing="false" text="By status" />
+                  <MenuItem mnemonicParsing="false" text="By fuel type" />
+            </items>
+          </Menu>
+            <Menu mnemonicParsing="false" text="Filter reservations">
+              <items>
+                <MenuItem mnemonicParsing="false" text="Newer than" />
+                  <MenuItem mnemonicParsing="false" text="Older than" />
+              </items>
+            </Menu>
+        </menus>
+      </MenuBar>
+      <Text layoutX="14.0" layoutY="95.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Upcoming Reservations:">
+         <font>
+            <Font size="14.0" />
+         </font></Text>
+      <Text layoutX="45.0" layoutY="291.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Available cars:">
+         <font>
+            <Font size="14.0" />
+         </font></Text>
+      <Label fx:id="ReservToday" layoutX="141.0" layoutY="110.0" prefHeight="122.0" prefWidth="519.0" />
+      <Label fx:id="AvailableCars" layoutX="142.0" layoutY="286.0" prefHeight="186.0" prefWidth="519.0" />
+      <Button fx:id="ReserveCarForDate" layoutX="670.0" layoutY="366.0" mnemonicParsing="false" onAction="#ReserveForADate" text="Reserve for a specific date" />
+   </children>
+</AnchorPane>
