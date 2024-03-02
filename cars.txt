@@ -1,0 +1,7 @@
+Car{id=1, car_model=Prius, active_status=true, fuel_type=HYBRID}
+Car{id=2, car_model=Aris, active_status=true, fuel_type=GAS}
+Car{id=3, car_model=Polo, active_status=true, fuel_type=DIESEL}
+Car{id=4, car_model=Prius, active_status=true, fuel_type=HYBRID}
+Car{id=5, car_model=Volvo, active_status=true, fuel_type=GAS}
+Car{id=6, car_model=Mazda, active_status=true, fuel_type=GAS}
+Car{id=7, car_model=Octavia, active_status=true, fuel_type=GAS}
