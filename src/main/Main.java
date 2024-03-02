@@ -24,7 +24,7 @@ public class Main extends Application {
         Controller controller = new Controller(new service(cars,revs));
 
 
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("/src/GUI/CarsGUI.fxml"));
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("/GUI/CarsGUI.fxml"));
         loader.setController(controller);
         Scene scene = new Scene(loader.load());
         stage.setScene(scene);

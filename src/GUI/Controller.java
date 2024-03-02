@@ -127,7 +127,7 @@ public class Controller {
     void LoginManager(){
         try {
             Controller controller = new Controller(service);
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("/src/GUI/ManagerLoginPage.fxml"));
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/GUI/ManagerLoginPage.fxml"));
             Stage stage = (Stage) Submit.getScene().getWindow();
             loader.setController(controller);
             Scene scene = new Scene(loader.load());
@@ -149,7 +149,7 @@ public class Controller {
         service.remove_reservation(Integer.parseInt(reservID));
         try{
             Controller controller = new Controller(service);
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("/src/GUI/HomePage.fxml"));
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/GUI/HomePage.fxml"));
             Stage stage = (Stage) SumbitReserv.getScene().getWindow();
             loader.setController(controller);
             Scene scene = new Scene(loader.load());
@@ -163,7 +163,7 @@ public class Controller {
     void CancelReservationSceneSwap() {
         try{
             Controller controller = new Controller(service);
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("/src/GUI/CancelReservPage.fxml"));
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/GUI/CancelReservPage.fxml"));
             Stage stage = (Stage) CancelReservButton.getParentPopup().getOwnerWindow();
             loader.setController(controller);
             Scene scene = new Scene(loader.load());
@@ -197,7 +197,7 @@ public class Controller {
     void GoToHome() {
         try{
             Controller controller = new Controller(service);
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("/src/GUI/HomePage.fxml"));
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/GUI/HomePage.fxml"));
             Stage stage = (Stage) Submit.getScene().getWindow();
             loader.setController(controller);
             Scene scene = new Scene(loader.load());
@@ -215,7 +215,7 @@ public class Controller {
             service.addUser(username.getText(), password1.getText());
             try {
                 Controller controller = new Controller(service);
-                FXMLLoader loader = new FXMLLoader(getClass().getResource("/src/GUI/HomePage.fxml"));
+                FXMLLoader loader = new FXMLLoader(getClass().getResource("/GUI/HomePage.fxml"));
                 Stage stage = (Stage) Submit.getScene().getWindow();
                 loader.setController(controller);
                 Scene scene = new Scene(loader.load());
@@ -239,7 +239,7 @@ public class Controller {
         if(service.searchUser(username,password)) {
             try {
                 Controller controller = new Controller(service);
-                FXMLLoader loader = new FXMLLoader(getClass().getResource("/src/GUI/HomePage.fxml"));
+                FXMLLoader loader = new FXMLLoader(getClass().getResource("/GUI/HomePage.fxml"));
                 Stage stage = (Stage) Submit.getScene().getWindow();
                 loader.setController(controller);
                 Scene scene = new Scene(loader.load());
@@ -261,7 +261,7 @@ public class Controller {
     void GoBack(ActionEvent event) {
         try{
             Controller controller = new Controller(service);
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("/src/GUI/CarsGUI.fxml"));
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/GUI/CarsGUI.fxml"));
             Stage stage = (Stage) Back.getScene().getWindow();
             loader.setController(controller);
             Scene scene = new Scene(loader.load());
@@ -274,7 +274,7 @@ public class Controller {
     @FXML
     void ShowCars(){ try{
         Controller controller = new Controller(service);
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("/src/GUI/ShowingCars.fxml"));
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("/GUI/ShowingCars.fxml"));
         Stage stage = (Stage) ShowCars.getParentPopup().getOwnerWindow();
         loader.setController(controller);
         Scene scene = new Scene(loader.load());
@@ -294,7 +294,7 @@ public class Controller {
         service.reserve_car(Integer.parseInt(carid),Integer.parseInt(Distance),Integer.parseInt(NumberOfPeople),date, hour);
         try{
             Controller controller = new Controller(service);
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("/src/GUI/HomePage.fxml"));
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/GUI/HomePage.fxml"));
             Stage stage = (Stage) SubmitReservDate.getScene().getWindow();
             loader.setController(controller);
             Scene scene = new Scene(loader.load());
@@ -308,7 +308,7 @@ public class Controller {
     void ReserveForADate(){
         try{
             Controller controller = new Controller(service);
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("/src/GUI/ReserveOnDate.fxml"));
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/GUI/ReserveOnDate.fxml"));
             Stage stage = (Stage) ReserveCarForDate.getScene().getWindow();
             loader.setController(controller);
             Scene scene = new Scene(loader.load());
@@ -322,7 +322,7 @@ public class Controller {
     void ReserveCar() {
         try{
             Controller controller = new Controller(service);
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("/src/GUI/ReserveNowPage.fxml"));
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/GUI/ReserveNowPage.fxml"));
             Stage stage = (Stage) ReserveCar.getScene().getWindow();
             loader.setController(controller);
             Scene scene = new Scene(loader.load());
@@ -341,7 +341,7 @@ public class Controller {
         service.reserve_car(Integer.parseInt(carid),Integer.parseInt(Distance),Integer.parseInt(NumberOfPeople), LocalDateTime.now().format(DateTimeFormatter.ofPattern("dd-MM-yyyy")),LocalDateTime.now().format(DateTimeFormatter.ofPattern("HH:mm")));
         try{
             Controller controller = new Controller(service);
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("/src/GUI/HomePage.fxml"));
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/GUI/HomePage.fxml"));
             Stage stage = (Stage) SumbitReserv.getScene().getWindow();
             loader.setController(controller);
             Scene scene = new Scene(loader.load());
@@ -356,7 +356,7 @@ public class Controller {
 
     try{
         Controller controller = new Controller(service);
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("/src/GUI/ShowingAllReservationsPage.fxml"));
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("/GUI/ShowingAllReservationsPage.fxml"));
         Stage stage = (Stage) showreservations.getParentPopup().getOwnerWindow();
         loader.setController(controller);
         Scene scene = new Scene(loader.load());
@@ -373,7 +373,7 @@ public class Controller {
     void ByModelFunction(ActionEvent event) {
         try{
             Controller controller = new Controller(service);
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("/src/GUI/ShowByModel.fxml"));
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/GUI/ShowByModel.fxml"));
             Stage stage = (Stage) ByModelButton.getParentPopup().getOwnerWindow();
             loader.setController(controller);
             Scene scene = new Scene(loader.load());
@@ -457,7 +457,7 @@ public class Controller {
 
         try {
             Controller controller = new Controller(service);
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("/src/GUI/SignInPage.fxml"));
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/GUI/SignInPage.fxml"));
             Stage stage = (Stage) buttonSignIn.getScene().getWindow();
             loader.setController(controller);
             Scene scene = new Scene(loader.load());
@@ -473,7 +473,7 @@ public class Controller {
     void SignUpPressed() {
         try{
             Controller controller = new Controller(service);
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("/src/GUI/SignUpPage.fxml"));
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/GUI/SignUpPage.fxml"));
             Stage stage = (Stage) buttonSignUp.getScene().getWindow();
             loader.setController(controller);
             Scene scene = new Scene(loader.load());
